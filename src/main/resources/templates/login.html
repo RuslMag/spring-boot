@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма входа</title>
+    <STYLE>
+        .buttonBlue {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 6px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+        }
+        .buttonGreen {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 6px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+        }
+    </STYLE>
+</head>
+<body>
+    <h1>Добро пожаловать!</h1>
+    <form th:action="@{/login}" method="post">
+        <h2>Пожалуйста, авторизуйтесь!</h2>
+        <p><label for="j_username">Логин</label>:
+            <input type="text" id="j_username" name="j_username"/></p>
+        <p><label for="j_password">Пароль</label>:
+            <input type="password" id="j_password" name="j_password"/></p>
+
+        <p><input class="buttonGreen" type="submit" value="ВОЙТИ" /></p>
+
+    </form>
+    <form action="/registration">
+        <input class="buttonBlue" type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ"/>
+    </form>
+</body>
+</html>
